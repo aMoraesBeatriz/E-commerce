@@ -1,0 +1,49 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title E-commerce
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+
+    style.
+      body {
+        padding-top: 50px;
+      }
+      .navbar-nav {
+        flex-direction: row;
+      }
+      .navbar-brand {
+        font-weight: bold;
+      }
+
+  body
+    header
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href="#") Ecommerce
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        div.collapse.navbar-collapse(id="navbarNav")
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+              a.nav-link(href="#") Home
+            li.nav-item
+              a.nav-link(href="/products") Produtos
+            li.nav-item
+              a.nav-link(href="/contact") Contato
+
+        form.form-inline.ml-auto(action="#", method="GET")
+          input.form-control(type="text", placeholder="Buscar produtos...", name="search")
+          button.btn.btn-outline-success(type="submit")
+            i.fas.fa-search(style="font-size:20px;")
+
+    //conteúdo específico de cada página
+    block content
+
+    footer.bg-light.text-center.py-4
+      p &copy; 2025 Ecommerce - Todos os direitos reservados.
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

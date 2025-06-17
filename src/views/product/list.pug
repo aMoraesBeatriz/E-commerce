@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  main.container
+    h1.text-center.mt-4 Listagem de Produtos
+    a.btn.btn-success.mb-4(href="/products/form") Adicionar Produto
+
+    ul
+      each product in products
+        li= product.name

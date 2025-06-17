@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  main.container
+    h1.text-center.mt-4 Formulário de Produtos
+    a.btn.btn-primary.mb-4(href='/products') Voltar à Listagem de Produtos
+    
+    // Formulário para adicionar um novo produto
+    form(action='/products/create', method='post')
+      div.form-group
+        label(for='name') Nome do Produto
+        input.form-control(id='name', name='name', type='text', required)
+
+      div.form-group
+        label(for='description') Descrição
+        textarea.form-control(id='description', name='description', rows='3', required)
+
+      button.btn.btn-success(type='submit') Salvar
